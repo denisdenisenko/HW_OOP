@@ -28,4 +28,4 @@ employees_array = [commission_employee_1, commission_employee_2, salaried_commis
 for e in employees_array:
     print(e)
     print("Total Earnings: ")
-    print(f'{e.earnings():,.2f}\n')
+    print(f'{e.earnings():,.2f} Euro \n')
