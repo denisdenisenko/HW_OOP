@@ -60,6 +60,6 @@ class CommissionEmployee:
         """Return string representation for repr()."""
         return ('CommissionEmployee: ' +
                 f'{self.first_name} {self.last_name}\n' +
-                f'social security number: {self.ssn}\n' +
-                f'gross sales: {self.gross_sales:.2f}\n' +
-                f'commission rate: {self.commission_rate:.2f}')
+                f'Social security number: {self.ssn}\n' +
+                f'Gross sales: {self.gross_sales:.2f}\n' +
+                f'Commission rate: {self.commission_rate:.2f}')

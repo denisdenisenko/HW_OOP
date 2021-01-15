@@ -22,9 +22,10 @@ salaried_commission_employee_manager_2 = SalariedCommissionEmployeeManager('Dona
                                                                            Decimal('0.10'), Decimal('0.20'))
 
 employees_array = [commission_employee_1, commission_employee_2, salaried_commission_employee_1,
-             salaried_commission_employee_2,
-             salaried_commission_employee_manager_1, salaried_commission_employee_manager_2]
+                   salaried_commission_employee_2,
+                   salaried_commission_employee_manager_1, salaried_commission_employee_manager_2]
 
-for e in employees:
+for e in employees_array:
     print(e)
+    print("Total Earnings: ")
     print(f'{e.earnings():,.2f}\n')

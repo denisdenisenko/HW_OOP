@@ -46,4 +46,4 @@ class SalariedCommissionEmployeeManager(SalariedCommissionEmployee):
     def __repr__(self):
         """Return string representation for repr()."""
         return ('Salaried' + super().__repr__() +
-                f'\nbonus for managing : {self.bonus_for_managing():.2f}')
+                f'\nBonus for managing : {self.bonus_for_managing():.2f}')

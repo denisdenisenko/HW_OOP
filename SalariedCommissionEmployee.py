@@ -34,4 +34,4 @@ class SalariedCommissionEmployee(CommissionEmployee):
     def __repr__(self):
         """Return string representation for repr()."""
         return ('Salaried' + super().__repr__() +
-                f'\nbase salary: {self.base_salary:.2f}')
+                f'\nBase salary: {self.base_salary:.2f}')
