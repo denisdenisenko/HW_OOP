@@ -1,5 +1,4 @@
-# salariedcommissionemployee.py
-"""SalariedCommissionEmployee derived from CommissionEmployee."""
+# SalariedCommissionEmployee derived from CommissionEmployee
 from CommissionEmployee import CommissionEmployee
 from decimal import Decimal
 
@@ -10,13 +9,14 @@ class SalariedCommissionEmployee(CommissionEmployee):
 
     def __init__(self, first_name, last_name, ssn,
                  gross_sales, commission_rate, base_salary):
-        """Initialize SalariedCommissionEmployee's attributes."""
+        # Initialize SalariedCommissionEmployee's attributes
         super().__init__(first_name, last_name, ssn,
                          gross_sales, commission_rate)
         self.base_salary = base_salary  # validate via property
 
     @property
     def base_salary(self):
+        """base salary getter"""
         return self._base_salary
 
     @base_salary.setter
