@@ -1,4 +1,3 @@
-# commmissionemployee.py
 """CommissionEmployee base class."""
 from decimal import Decimal
 
@@ -6,9 +5,9 @@ from decimal import Decimal
 class CommissionEmployee:
     """An employee who gets paid commission based on gross sales."""
 
-    def __init__(self, first_name, last_name, ssn,
+    def __init__(self, first_name, last_name, ssn,  # ssn stands for social security number
                  gross_sales, commission_rate):
-        """Initialize CommissionEmployee's attributes."""
+        # Initialize CommissionEmployee's attributes
         self._first_name = first_name
         self._last_name = last_name
         self._ssn = ssn
@@ -17,23 +16,28 @@ class CommissionEmployee:
 
     @property
     def first_name(self):
+        """first_name getter"""
         return self._first_name
 
     @property
     def last_name(self):
+        """last_name getter"""
         return self._last_name
 
     @property
     def ssn(self):
+        """ssn getter"""
         return self._ssn
 
     @property
     def gross_sales(self):
+        """gross sales getter"""
         return self._gross_sales
 
     @gross_sales.setter
     def gross_sales(self, sales):
-        """Set gross sales or raise ValueError if invalid."""
+        """gross sales setter"""
+        # Set gross sales or raise ValueError if invalid
         if sales < Decimal('0.00'):
             raise ValueError('Gross sales must be >= to 0')
 
@@ -41,6 +45,7 @@ class CommissionEmployee:
 
     @property
     def commission_rate(self):
+        """commission rate getter"""
         return self._commission_rate
 
     @commission_rate.setter
