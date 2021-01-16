@@ -16,10 +16,12 @@ class SalariedCommissionEmployeeManager(SalariedCommissionEmployee):
 
     @property
     def ratio1(self):
+        """ratio 1 getter"""
         return self._ratio1
 
     @property
     def ratio2(self):
+        """ratio2 getter"""
         return self._ratio2
 
     @ratio1.setter
@@ -37,6 +39,7 @@ class SalariedCommissionEmployeeManager(SalariedCommissionEmployee):
         self._ratio2 = ratio
 
     def bonus_for_managing(self):
+        """function that calculates the bonus"""
         return self.ratio1 * self.base_salary + self.ratio2 * self.gross_sales
 
     def earnings(self):

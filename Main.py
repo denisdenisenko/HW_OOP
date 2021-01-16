@@ -6,10 +6,14 @@ from decimal import Decimal
 commission_employee_1 = CommissionEmployee('Gogo', 'Magogo', '333-33-333', Decimal('13000.00'), Decimal('0.06'))
 commission_employee_2 = CommissionEmployee('Soso', 'Masoso', '444-44-444', Decimal('12000.00'), Decimal('0.05'))
 
+commission_employee_1.gross_sales = Decimal('11000')
+
 salaried_commission_employee_1 = SalariedCommissionEmployee('Mono', 'Manono', '111-11-111', Decimal('13000.00'),
                                                             Decimal('0.04'), 1500)
 salaried_commission_employee_2 = SalariedCommissionEmployee('Bobo', 'Babobo', '222-22-222', Decimal('14000.00'),
                                                             Decimal('0.05'), 1600)
+
+salaried_commission_employee_1.base_salary = Decimal('1400')
 
 salaried_commission_employee_manager_1 = SalariedCommissionEmployeeManager('Denis', 'Denisenko', '999-99-999',
                                                                            Decimal('22000.00'),
@@ -21,11 +25,19 @@ salaried_commission_employee_manager_2 = SalariedCommissionEmployeeManager('Dona
                                                                            Decimal('0.02'), 8000,
                                                                            Decimal('0.10'), Decimal('0.20'))
 
+salaried_commission_employee_manager_1.ratio1 = Decimal('0.15')
+
 employees_array = [commission_employee_1, commission_employee_2, salaried_commission_employee_1,
                    salaried_commission_employee_2,
                    salaried_commission_employee_manager_1, salaried_commission_employee_manager_2]
 
-for e in employees_array:
-    print(e)
-    print("Total Earnings: ")
-    print(f'{e.earnings():,.2f} Euro \n')
+
+def polymorphic_function_example():
+    """Function that uses polymorphism and applies the same function on different objects"""
+    for e in employees_array:
+        print(e)
+        print("Total Earnings: ")
+        print(f'{e.earnings():,.2f} Euro \n')
+
+
+polymorphic_function_example()
